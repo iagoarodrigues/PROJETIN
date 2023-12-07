@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/css/style1.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <title>Cadastro</title>
+</head>
+<body>
+     <!---------------------------- BOTÕES DE ACESSIBILIDADE--------------------------------------------->
+     <div class="btn-acessibilidade">
+        <button onclick="myFunction()"><img src="./img/modo-escuro.png" alt="modo noturno"></button>
+    <!--<button onclick="letra()"><img src="acessibilidade.png" alt="modo letra alta"></button> --------->
+    </div>
+    <form>
+        <img src="./img/telecall.svg" class="telecall">
+            <div class="input-form">
+                <input type="text" name="nome" id="camponome" class="inputs" minlength="15" maxlength="60" required>
+                <label id="labelNome" for="nome">Nome Completo</label>
+            </div>
+            <div class="input-date">
+                <input type="date" name="data" required >
+                <label for="data">Data de Nascimento</label>
+            </div>
+
+            <div class="input-radius">
+                <label for="sexo">Sexo</label><br>
+                <input type="radio" name="sexo" id="masculino" value="masculino">
+                <label for="masculino">Masculino</label>
+            </div>
+            <div class="input-radius">
+                <input type="radio" name="sexo" id="feminino" value="feminino">
+                <label for="feminino">Feminino</label>
+            </div>
+            <div class="input-radius">
+                <input type="radio" name="sexo" id="pnd" value="pnd">
+                <label for="pnd">Prefiro não declarar</label>
+            </div>
+            <div class="input-form">
+                <input type="text" id="campomae" name="materno" required class="inputs">
+                <label id="labelmae" for="materno">Nome da Mãe</label>
+            </div>
+            <div class="input-form">
+                <input type="text" id="campocpf" name="cpf" autocomplete="off" maxlength="14" required class="inputs">
+                <label id="labelcpf" for="cpf">CPF</label>
+            </div>
+            <div class="input-form">
+                <input type="text" id="campocel" name="celular" placeholder="(+55) XX XXXXX-XXXX" maxlength="19" required class="inputs">
+                <label id="labelcel" for="celular">Telefone (Celular)</label>
+            </div>
+            <div class="input-form">
+                <input type="text" id="campotel" name="telefone" placeholder="(+55) XX XXXX-XXXX" maxlength="18" required class="inputs">
+                <label id="labeltel" for="telefone">Telefone</label>
+            </div>
+            <div class="input-form">
+                <input type="text" id="campoend" name="endereco" required class="inputs">
+                <label id="labelend" for="endereco">Endereço</label>
+            </div>
+            <div class="input-form">
+                <input type="text"  id="campouser" name="usuario" maxlength="6" required class="inputs">
+                <label id="labeluser" for="usuario">Nome de Usuário</label>
+            </div>
+            <div class="input-form">
+                <input type="password" id="camposenha" name="senha" autocomplete="off" required class="inputs">
+                <label id="labelsenha" for="senha">Senha</label>
+            </div>
+            <div class="input-form">
+                <input type="password" id="confirmsenha" name="conf_senha" autocomplete="off" required class="inputs">
+                <label id="labelconfirm" for="conf_senha">Confirmar Senha</label>
+            </div>
+
+<!--------------------------------------BOTÕES DE CADASTRO-------------------------------------------->
+            <div class="bnt-form">
+                <button onclick="cadastrar()">CLICKA</button>
+                <input type="reset" value="Cancelar" class="btn btn-danger">
+            </div>
+
+<!--------------------------------------SCRIPT-------------------------------------------------------->
+        </form>
+        <script src="./script/acessibilidade.js"></script>
+        <script src="./script/regex.js"></script>
+    </body>
+</html>
+    
